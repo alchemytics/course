@@ -1,1 +1,5 @@
-![image](https://github.com/user-attachments/assets/7abd5989-706d-4663-9d57-864e01672bba)# Course
+Чего не будет на курсе:
+1. Load Balancer
+2. Log'и и логгирование
+3. Кибер Безопасность
+4. 
