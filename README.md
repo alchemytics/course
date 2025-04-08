@@ -9,3 +9,6 @@
 Дополнительные ссылки:
 https://excalidraw.com/#json=uN6fXOZRJuWDRykoDcrLc,dxi0vqrj0qnEBHuqsi8tvA - ссылка на систем дизайн
 https://my.selectel.ru/login/ - облачный сервис, где мы работаем 
+
+
+В рамках рассказа будем объснять и другие технологии и подходы, которые существуют
