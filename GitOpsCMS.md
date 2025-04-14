@@ -14,14 +14,14 @@ API будет забирать файлы типа Markdown (с расшире�
 ```
 chapters/
 |- 00_introduction.md
-|- 01 /
+|- 01/
 |  +--- 00_intro.md
 |  +--- 01_basics.md
 |  +--- 01_basics/
 |       +--- 00_html.md
 |       +--- 01_js.md
 |       +--- 02_css.md
-|- 02 /
+|- 02/
 |  +--- 00_intro.md
 |  +--- 01_etl.md
 |  +--- 01_etl/
