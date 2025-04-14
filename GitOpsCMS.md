@@ -2,40 +2,6 @@
 
 В этом разделе будет приведена информация о том, каким образом структурировать контент, чтобы он в автоматическом режиме подтягивался с помощью API на сайт.
 
-## Общая схема взаимодействия
-
-### Запрос оглавления
-
-```mermaid
-sequenceDiagram
-participant user
-participant website
-participant API
-participant repo
-
-user ->> website: переходит на страницу с содержимым курса
-website ->> API: запрашивает верхнеуровневое оглавление
-API <<->> repo: синхронизирует файлы
-API ->> website: отдаёт JSON со ссылками
-website ->> user: отрисовывает ссылки
-```
-
-### Переход на конкретную страницу
-
-```mermaid
-sequenceDiagram
-participant user
-participant website
-participant API
-participant repo
-
-user ->> website: переходит на конкретную страницу
-website ->> API: запрашивает содержимое страницы по пути и slug'у
-API <<->> repo: ищет запрашиваемый файл
-API ->> website: передаёт сериализованное представление страницы
-website ->> user: отрисовывает страницу
-```
-
 ## Файловая структура
 
 API будет забирать файлы типа Markdown (с расширением `.md`) из папки с названием `chapters`, которая должна находиться в корне репозитория. 
@@ -83,5 +49,36 @@ chapters/
 
 Крайне настоятельно рекомендуется избегать коммитов непосредственно в main, так как это может привести некорректным результатам работы
 
+## Общая схема взаимодействия
 
+### Запрос оглавления
 
+```mermaid
+sequenceDiagram
+participant user
+participant website
+participant API
+participant repo
+
+user ->> website: переходит на страницу с содержимым курса
+website ->> API: запрашивает верхнеуровневое оглавление
+API <<->> repo: синхронизирует файлы
+API ->> website: отдаёт JSON со ссылками
+website ->> user: отрисовывает ссылки
+```
+
+### Переход на конкретную страницу
+
+```mermaid
+sequenceDiagram
+participant user
+participant website
+participant API
+participant repo
+
+user ->> website: переходит на конкретную страницу
+website ->> API: запрашивает содержимое страницы по пути и slug'у
+API <<->> repo: ищет запрашиваемый файл
+API ->> website: передаёт сериализованное представление страницы
+website ->> user: отрисовывает страницу
+```
